@@ -88,29 +88,29 @@ using namespace std;
     }
   void rainfall::outputBarChart()
     {
-    /*  cout << "\n Rainfall distribution:" << endl;
-      /* stores frequency of marks in each range of 10 marks
-      const size_t frequencySize = 5;
+      cout << "\n Rainfall distribution:" << endl;
+      /* stores frequency of marks in each range of 10 marks */
+      const size_t frequencySize = 12;
       array<unsigned int, frequencySize> frequency = { }; // init to 0s
-      /* for each mark, increment the appropriate frequency
-      for (double rain : m_rainfall)
+      /* for each mark, increment the appropriate frequency */
+        for (int i = 0; i<12 ; i++)
       {
-        if (rain<60)
-        frequency[0]=1;
-        else if (rain>=60 && rain <90)
-        frequency[1]=2;
-        else if (rain>=90 && rain <120)
-        frequency[2]=3;
-        else if (rain>=120 && rain<150)
-        frequency[3]=4;
-        else if (rain>=150)
-        frequency[4]=5;
+        if (m_rainfall[i]<60)
+        frequency[i]=1;
+        else if (m_rainfall[i]>=60 && m_rainfall[i] <90)
+        frequency[i]=2;
+        else if (m_rainfall[i]>=90 && m_rainfall[i] <120)
+        frequency[i]=3;
+        else if (m_rainfall[i]>=120 && m_rainfall[i]<150)
+        frequency[i]=4;
+        else if (m_rainfall[i]>=150)
+        frequency[i]=5;
         else
         cout<<"invalid rain parameters";
       }
-      /* for each mark frequency, print bar in chart
+      /* for each mark frequency, print bar in chart */
       for (size_t count = 0; count < 12; ++count) {
-        /* output bar labels ("0-9:", ..., "90-99:", "100:" )
+        /* output bar labels ("0-9:", ..., "90-99:", "100:" )*/
         if (count==0)
         cout << " January";
         else if (count==1)
@@ -137,11 +137,11 @@ using namespace std;
         cout << " December ";
         else
         cout << "invalid count";
-        /* print bar of asterisks
-        for (unsigned int stars = 0; stars < frequency[frequencySize]; ++stars)
+        /* print bar of asterisks */
+        for (unsigned int stars = 0; stars < frequency[count]; ++stars)
           cout << '*';
         cout << endl; // start a new line of output
-*/
-    
+
+
     }
   }

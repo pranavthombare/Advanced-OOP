@@ -11,17 +11,30 @@ int main()
   double rain_mm;
   char c;
   do{
+  comeback:
   cout<<"Enter month number(starting from 1):";
   cin>>month_number;
-  cout<<"\n Enter rainfall (in mm):";
+  if(month_number<1 || month_number>12)
+  {
+    cout<<"\nEnter a valid month"<<endl;
+    goto comeback;
+  }
+  cout<<"\nEnter rainfall (in mm):";
   cin>>rain_mm;
   r1.setMonthAmount(month_number,rain_mm);
 
-  cout<<"\n Enter again (y or n)?";
+  cout<<"\n Enter again? (n to exit)";
   cin>>c;
 }while(c!='n');
-  cout<<"\n Enter the month number to get data:";
+  cout<<"\nEnter the month number to get data:";
   cin>>month_number;
   r1.getMonthAmount(month_number);
+  cout<<"\nLowest rainfall is :";
+  r1.getLowest();
+  cout<<"\nHighest rainfall is :";
+  r1.getHighest();
+  cout<<"\nMean rainfall is :";
+  r1.getMean();
+  cout<<"\n\n\nThe bar chart is as follows "<<endl;
   r1.outputBarChart();
 }
