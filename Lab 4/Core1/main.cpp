@@ -6,8 +6,11 @@ using namespace std;
 
 int main()
 {
-queue q;
-int input;
+//queue<int> q;
+//int input;
+
+queue<char> q;
+char input;
 int choice=0;
 
 while(choice!=1)
@@ -25,8 +28,9 @@ while(choice!=1)
 cout<<"\nRemove the number from the queue?? (0 for yes, 1 for no)";
 cin>>choice;
 if(choice==0)
-cout<<""<<q.remove()<<endl;
-q.print();
+cout<<"";
+q.dequeue();
+//q.print();
 cout<<endl;
 }
 
