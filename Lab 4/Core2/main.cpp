@@ -6,13 +6,12 @@ using namespace std;
 
 int main()
 {
-    LinkedList* list = new LinkedList();
+    LinkedList<int>* list= new LinkedList<int>();
     for (int i = 0; i < 10; ++i)
     {
-        list->add(rand() % 100);
+        list->add(rand() % 101);
     }
     list->print();
     cout << "List Length: " << list->length << std::endl;
-    delete list;
     return 0;
 }
