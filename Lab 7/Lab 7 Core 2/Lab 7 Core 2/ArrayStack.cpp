@@ -1,4 +1,5 @@
 #include <iostream>
+#include <array>
 using namespace std;
 
 class ArrayStack {
@@ -16,7 +17,7 @@ void pop() {
   size--;
 }
 	private:
-		int data[500];
+		array<int,500> data;
 		int size = 0;
 };
 
